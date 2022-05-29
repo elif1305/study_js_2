@@ -2,10 +2,8 @@
 //*                 (OBJECTS)
 //* ===================================================
 
-//? Diziler sıralı bellek bölgeleridir. Dolayısıyla bu
-//? bölgelere indeksleme ile erişebiliriz.
-//? Ancak daha karmaşık veri yapısı (unstructured)ihtiyaçalrımız
-//? için Object'leri kullanabiliriz.
+//? Diziler sıralı bellek bölgeleridir. Dolayısıyla bu bölgelere indeksleme ile erişebiliriz.
+//? Ancak daha karmaşık veri yapısı (unstructured)ihtiyaçalrımız için Object'leri kullanabiliriz.
 
 //? Object'lerde Key-value (property-value) yapısı kullanılır.
 //? Herhangi bir veriyi erişmemk için property (key) adı kullanılır.
@@ -113,6 +111,7 @@ console.log('BILGI:', kisi.ozet());
 //! Çünkü, arrow içerisindeki this kelimesi global scope'u gösterir. (window nesnesini) gösterir.
 //! Bunu engellemek için object fonskyionlarını tanımlamak için normal fonksiyon  yöntemlerini kullanmak gerekir.
 //? sonuc ; arrow functionlari object ler icinde kullanma !!
+//? arrow functionlar this erisimine acik degildir. yani bir arrow function icinde this kullanirsan bu this i fonksiyon icinde olarak algilamaz global algilar(window) bu nedenle hata verir.
 
 
 
@@ -145,7 +144,10 @@ console.log('BILGI:', kisi.ozet());
 
 // bu yontem cokta kullanisli degil, cunku belki de bu objenin icinde 1000 kisi olacak. erisim zor olacak.
 
-// arraya cevirip indisleme ile erisim yapilablir : JSON FORMATI  JSON=JS OBJECT NOTAION
+//! arraya cevirip indisleme ile erisim yapilablir : JSON FORMATI  JSON=JS OBJECT NOTAION
+//* su anda internet ortaminda neredeyse butun verilerin alimi bu formattta yapiiyor.
+//*  json = dizi icersindeki objeler
+
 const kisiler = [
     {
       name: 'Ahmet',
@@ -217,6 +219,6 @@ console.log(kisilerFullIsim);
 
 //* Ornek7: kisilerin ortalama yasini hesaplayiniz.
 
-const ortYas = kisiler.reduce((t, kisi) => t + kisi.age, 0) / kisiler.lenght;
+const ortYas = kisiler.reduce((t, kisi) => t + kisi.age, 0) / kisiler.lenght;  // burada baslangic degeri olarak 0 verilmezse hata verir. bu nedenle genel olarak baslangic degeri verilmesi daha iyi olacaktir.
 
 console.log(ortYas);

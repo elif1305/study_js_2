@@ -35,10 +35,10 @@ const cars = {
 const {car1, car2} = cars;
 console.log(car1, car2);
 
-const {name : c1Name, model : c1Model} = car1;
+const {name : c1Name, model : c1Model} = car1;   // hem car1 in hemde car2 nin icinde ayni key ler(name, model) oldugu icin sistem isim degistirmemize izin veriyor. 
 console.log(c1Name, c1Model);
 
-const {name: c2Name, model : c2Model} = car2;
+const {name: c2Name, model : c2Model} = car2;  // yukaridaki sebepten dolayi buradada ayni sekilde. yani bu => car2 den gelen name i c2Name olarak kayfet demek.
 console.log(c2Name, c2Model);
 
 
