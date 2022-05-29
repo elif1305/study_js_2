@@ -1,0 +1,10 @@
+========================
+  JD -SELECTORS(DOM)
+========================
+
+ders oncesi ek kaynaklar;
+
+https://www.youtube.com/watch?v=z0HN-fG6oT4
+
+https://v8.dev/
+

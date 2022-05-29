@@ -88,9 +88,13 @@ const ogrenciler = [
         if(ogrenci === isim){                       // name,isim veya baska bise yazilmasinin onemi yok , cunku referansi gidiyor
             sayac++;                          // ogrenci === isim ? sayac++ : null ; ternary  
         }                                      //  ogrenci === isim && sayac++ ;  shortcut- circuit yontemi  && = kosul dogru ise ifadeyi calistirir
-    }
-    //  return sayac ? `${isim} bulunamadi`: `${isim}, ${sayac} adet bulundu.`; 
-    //  return !sayac ? `${isim}, ${sayac} adet bulundu`: `${isim} bulunamadi `;    // 
+    }                                            // ogrenci === isim || sayac++ ;  shortcut- circuit yontemi  || = kosul yanlis ise ifadeyi calistirir
+    
+    //  return sayac ? `${isim}, ${sayac} adet bulundu`: `${isim} bulunamadi `;    // sayac varsa : `${isim}, ${sayac} adet bulundu` bunu dondurur
+    //  return !sayac ? `${isim} bulunamadi`: `${isim}, ${sayac} adet bulundu.`;   // sayacin basindaki unlem olumsuzluk icin yani sayac yoksa : `${isim} bulunamadi` bunu dondur demek.
+    //  return sayac ===0 ? `${isim} bulunamadi`: `${isim}, ${sayac} adet bulundu.`;   // bi ustteki unlemli hali , yada === 0 yazarakta ayni seyi yazabliriz.
+
+
     if (sayac === 0){
         return `${isim} bulunamadi`;                   // name,isim veya baska bise yazilmasinin onemi yok , cunku referansi gidiyor
     }else{
