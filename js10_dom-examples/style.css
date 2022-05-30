@@ -1,0 +1,13 @@
+section button {
+    width: 5rem;
+    height: 2.5rem;
+}
+
+section .diller {
+    height: 2.5rem;
+    width: 20rem;
+}
+
+.red{
+    color: red;
+}
