@@ -159,7 +159,7 @@ console.log(toplamMaas1);
 //* ======================================================
 
 //* maas toplamini bulunuz.
-const toplamMaas = maaslar.reduce((t, m) => t + m, 0);
+const toplamMaas = maaslar.reduce((t, m) => t + m, 0);  // buradaki 0 => toplamMaas in baslangic degerini gosterir. oraya 0 yazilmasa da onemli degildir.
 console.log('TOPLAM MAAS:', toplamMaas);
 
 //* maasi ortalamanin altinda olanlara %20 zam yapalim.
