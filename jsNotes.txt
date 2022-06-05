@@ -1,0 +1,103 @@
+====================
+      JS Notes
+====================
+
+=> childElementCount
+
+=> focus()  ; or sayfa yuklendiginde input a focus istiyorsak
+
+=> createElement yaptiktan sonra , appendChild yapilmasi gerekir.
+
+=> closest() ; en yakin parent i bulur, birden fazla varsa aranan en yakin olani alir.
+
+=> classlist() ; onceki classlari silmek istemiyorsak bununla ekleme yapabliriz.
+
+=> preventDefault() ; event in default davranisini engeller. 
+
+
+=>
+event.target ile istediğimiz DOM elemanlarına erişirken kullandığımız sibling, parentElement vb. seçicilerini 
+kullanmanın yanında alternatif olarak geçen derste biraz bahsettiğim closest() seçicisi de kullanılabilir.
+
+1-) event.target.closest("parent class veya id'si")
+Bu şekilde nested olarak parent'lar yazmak yerine doğrudan ilgili parent'a gidebilrisiniz.
+
+2-) size parent değil de kardeş vb elementler lazım ise
+bulunduğunuz element ile aranılan kardeş element arasındaki ortak bir parent closest() ile seçilir 
+ve querSelector() ile istenilen kardeş veya child'a erişilir.
+event.target.closest("ortak parent adi" ).querySelector("aranılan elementin adi")
+
+=> 
+birden fazla sayfada kullanmak istedigimiz degiskenleri storage ta tutabliriz;
+localStorage.setItem(neyi tutmak istiyorsan)  ; saklama suresi yok silene kadar kalir
+sessionStorage.setItem(neyi tutmak istiyorsan)   ; browser kapanana kadar kalir
+cagirirken;
+localStorage.getItem()
+sessionStorage.getItem()
+
+=>
+capturing : buyuk div e eventListener (or; click) tanimlayarak, if conditions larla icerisindeki elementlerin click event ine ulasmak
+bobbling
+
+e.target   = tiklanan yeri , hedefi verir(event ile amaclanan)
+
+(checkout projesinden ornek)
+
+//! 1. step : tiklanan yerleri belirleme
+//CAPTURING ILE;
+
+// let productsDiv = document.querySelector(".products");
+// productsDiv.addEventListener("click", (event)=>{
+//     if (event.target.className == 'minus'){          
+//         console.log("minus button click");
+//     } else if (event.target.classList.contains('plus')){
+//         console.log('plus button clicked');
+//     }else if (event.target.classList.contains('remove-product')){
+//         console.log('remove button clicked');
+//     }
+//     else{
+//         console.log("other elements clicked");
+//     }
+//    // console.log(event.target);           
+// })
+
+
+=>  confirm() ; true false dondurur. icerideki sarti saglarsa , altta verilen kodu uygular.
+
+(checkout projesinden ornek)
+
+// productsDiv.addEventListener("click", (event)=>{
+//     if (event.target.className == 'minus'){  
+//         if ( event.target.nextElementSibling.innerText > 1){ 
+//         event.target.nextElementSibling.innerText-- ;   
+//         }else{
+//             if (confirm("product will be deleted?")){           // eger kullanici ok derse silecek , yani confirm i onaylayacak 
+//                 event.target.parentElement.parentElement.parentElement.remove();
+//             }
+//         }
+//     } else if (event.target.classList.contains('plus')){
+//         event.target.previousElementSibling.innerText++ ;
+//         //console.log('plus button clicked');
+//     }else if (event.target.classList.contains('remove-product')){
+//         event.target.parentElement.parentElement.parentElement.remove();
+//        // console.log('remove button clicked');
+//     }
+//     else{
+//         //console.log("other elements clicked");
+//     }
+   
+// })
+
+
+
+
+=> toFıxed(kac basaamak istioyrsan onu yaz) : vurgunlden sonra kac basamak istiyorsak almak icin
+
+=>parseFloat()
+
+
+
+
+
+
+
