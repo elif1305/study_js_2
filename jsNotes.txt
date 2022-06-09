@@ -95,8 +95,10 @@ e.target   = tiklanan yeri , hedefi verir(event ile amaclanan)
 
 =>parseFloat()
 
+=> form.reset()   input yerini yenilemesi icin
 
 
+=> if(e.target.classList.contains == "btn" )     
 
 
 
