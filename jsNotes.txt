@@ -95,7 +95,14 @@ e.target   = tiklanan yeri , hedefi verir(event ile amaclanan)
 
 =>parseFloat()
 
-=> form.reset()   input yerini yenilemesi icin
+=> form.reset()   input yerini yenilemesi icin, (buradaki form form elementini yakaladigimiz div in adi.)
+
+=> sayfada form varsa otoamtik olaarak yeniler, bunu engellmeek icin e.preventDefault() eklenir.
+
+=> parseFloat() : integer yapmak icin.
+
+=> value : input,html elemenlerinde kullanilir,
+geri kalanlar icin innerHTML kullanilir.
 
 
 => if(e.target.classList.contains == "btn" )     
