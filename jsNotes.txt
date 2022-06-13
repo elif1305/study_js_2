@@ -109,4 +109,152 @@ geri kalanlar icin innerHTML kullanilir.
 
 
 
+=>  //? Baslangicta input aktif olsun
+window.onload = function () {
+  todoInput.focus();
+};
+
+
+=>  //? Klavyeden enter tusuna basilmasi ile add butonunun click fonksiyonunun cagrilmasi
+todoInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    btn.click();
+  }
+});
+
+
+=> //? delete ve ok butonları için event tanimlamasi
+todoUl.addEventListener('click', (e) => {
+  //!Event, sil butonlarının birisinden geldi ise
+  if (e.target.classList.contains('fa-trash')) {
+    //? ilgili li elementini silerek DOM'u güncelle
+    e.target.parentElement.remove();
+  }
+
+=>   //!Event, silme veya ok butonlarından geldi ise
+  if (e.target.classList.contains('fa-check')) {
+    //? ilgili li elementinde checked adinda bir class varsa bunu sil
+    if (e.target.parentElement.classList.contains('checked')) {
+      e.target.parentElement.classList.remove('checked');
+    } else {
+      //? ilgili li elementinde checked adinda bir class yoksa ekle
+      e.target.parentElement.classList.add('checked');
+    }
+  }
+});
+
+=> local storage stringlerle calisir. Yani local storage e veri atacak isek string olarak atmamiz gerekir.
+
+=> storage a veri atmanin en kolay yollarindan biri bir verielri bir arryin icine atip arrayi storage a gondermek.
+
+=> getItem ve setItem var. bu nedenle verileri butuncul olarak ekliyruz butuncul olarak cikariyoruz.
+
+=> adimlar,
+
+1- diziyi olustur
+
+let todos = [];
+
+2- neyi saklamak istedigni belirle.
+
+or; liste icindeki li nin, sadece yazi kismi mi? tiklanmis mi tiklanmamis mi ozelligini ?
+
+    1- li icerisindeki veriyi tutualim
+    2 - tiklanma bilgisini tutalim
+    3- id bilgisini tutalim
+
+YANI ; bir obje olusturalim.
+
+const todoObject = {
+      id: new Date().getTime(),
+      isDone: false,
+      content: todoInput.value,
+    };
+
+
+NOT : id: new Date().getTime(),   id olusturma yontemlerinden biri, saniye degeri verdigi icin uniqe bir deger vermis oluyoruz.
+
+NOT : DIZIDEN BIR VERI SILMEK ISTEDIGIMIZDE ID ILE BUNU YAPMAK ISIMIZI KOLAYLASTIRIR.
+
+3-     //?Yeni olsuturulan todo'yu diziye gondermek icin
+    todos.push(todoObject);
+
+
+4-     //?todos dizisinin son halini localStorage'e sakla
+    localStorage.setItem('todos', JSON.stringify(todos));
+
+burada todos u string olarak gondermemiz gerektigi icin, stringe cevirip gonderiyoruz.
+
+
+5- su an bilgiler loclstorage a gonderildi. Fakat cagirma islemi yapilmadi. bunun icin yani sayfa acildiginda localdeki bilgileri 
+ekrana yuklemek gerekiyor. bunun icin bu ornekte bir fonksiyon yazalim.
+
+
+renderSavedTodos();
+
+function renderSavedTodos() {
+  todos.forEach((todo) => {
+    createListElement(todo);
+  });
+}
+
+6- let todos = JSON.parse(localStorage.getItem('todos')) 
+
+basta tanimladigimiz todos arrayinin karsisina yazarak direk localdeki bilgileri alabliriz.
+localden gelen bilgi string olarak gelecegi icin bunu parse() ile stringe ceviriyoruz.
+
+
+
+
+7- function renderSavedTodos() {
+  todos.forEach((todo) => {
+    createListElement(todo);
+  });
+}
+
+function createListElement(todo) {
+  //? her bir todo objesini destructure yaptık
+  const { id, content, isDone } = todo;
+  todoUl.innerHTML += `
+     <li id=${id} class=${isDone ? 'checked' : ''} >
+      <i class="fa fa-check"></i>
+      <p>${content}</p>
+      <i class="fa fa-trash"></i>
+    </li>`;
+}
+
+
+
+8- localde veri olmadiginda foreach yapisinin undefined olmamasi icin ;
+todos arryinin sonuna bos liste ekliyoruz, yani localde veri varsa geitr yoksa bos array gonder demek.
+
+
+let todos = JSON.parse(localStorage.getItem('todos')) || [];   ( shortscript yontemi :  || sol tarafndaki yoksa sag tarafindakini aktar demek , && sol tarafindaki varsa sagdakini aktar demek olur )
+
+
+=>  local e gonderdigimiz array in icinden verieri silmek icin;
+slice()
+filter() kullanilablir.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
