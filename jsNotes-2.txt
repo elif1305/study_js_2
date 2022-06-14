@@ -1,0 +1,21 @@
+///////////////////////////////
+      API
+///////////////////////////////
+
+
+/**** POSTMAN *******/
+
+API DOKUMANI : https://reqres.in/api/users?page=2
+
+=>  get islemlerinde url ile 
+post put delete body ile gondermek daha dogru
+
+=> body daha cok veri guncellerken veya yeni veri eklerken kullaniliyor.
+
+=> https://learning.postman.com/docs/writing-scripts/script-references/test-examples/
+
+=> postman yayin yapma
+
+collections-> CaptionPrices (yayinlanmak istenilen belge) yanindaki 3 noktaya tikla->view documentaion ->
+publish -> acilan sayfadan ayarlari yap publish de.
+
