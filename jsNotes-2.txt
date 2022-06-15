@@ -19,3 +19,90 @@ post put delete body ile gondermek daha dogru
 collections-> CaptionPrices (yayinlanmak istenilen belge) yanindaki 3 noktaya tikla->view documentaion ->
 publish -> acilan sayfadan ayarlari yap publish de.
 
+/////////////////////////////
+SYNCHRONOUS - ASYNCHRONOUS 
+/////////////////////////////////
+
+Synchronous : sirali calisan kodlar, cok uzun kodlarda calismasi cok zaman alir.
+ASynchronous : arka planda calisan kodlar vardir ve code u bloklamayan code lara ASynchronous kodlama denir.
+
+//! Javascript, bir single-threaded ve Asenkron Programlama dilidir.
+=> single-threaded : birim zamanda bir islem parcacigi calistirabilir.
+
+=> bir isi yurutmek icin alt procesessler olusturuluyor, ve bu processlerinde alt thread leri olusturuluyor.
+
+
+=> Multithreading For example, while subscribing to a website, clicking the submit button would cause you to wait until the confirmation e-mail is sent to your mailbox if it is not sent on a separate thread.
+
+=> CPU birden fazla iş yaparken aslında zamanı küçük dilimlere böldüğünde milisaniye seviyesinde. belli bir zaman aralığında birden fazla iş yapıyormuş gibi geliyor.
+
+=> 
+console.time('timer');  // ne kadar sure gectigini olcmek icin baslatma fonksiyonu
+bekle(3000);
+console.timeEnd('timer');  // ne kadar sure gectigini olcmek icin baslatilan fonks. durdurma fonksiyonu
+
+
+=> setTimeout()
+setTimeout(function, milliseconds);
+
+setTimeout in icine, buradaki surenin bir onemi yok. setTimeout kullanildigi zaman macrotask queue sirasina girer ve microtask queue sirasi bitmeden macroya gecmeyecegi icin sure ne olursa olsun once microtask in bitmesi beklenir sonra macro task a gecilir.
+
+
+birden fazla setTimeout oldugunda surelerine gore calisir, sureleri esitse yazilma sirasina gore calisir.
+
+
+Examples of macrotasks are setTimeout, setInterval, setImmediate, etc.
+Examples of microtasks are, Promises, processes.nextTick, etc
+
+=> Asenkron (setInterval, clearInterval)
+
+
+=> Callback Hell (nested ve birbirine bagli callback'ler)
+
+
+// callback yontemi sikintili bir yapi oldugu icin bazi cozumler gelistirilmis.
+
+//? COZUMLER:
+//?----------------------------------------------------------------
+//* 1- XMLHttpRequest (Eski yontem, Ornek: AJAX)
+//? https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
+//* 2- Promise,
+//! 3- Fetch API (Promise'in basitlestirilmis hali),
+//! 4- ASYNC-AWAIT (Fetch API'nin makyajlanmis hali)
+
+
+
+2- Promise
+
+
+Promise, asenkron bir islemin basariyla ve basarisizlikla bittigini gosteren
+ve ayni zamanda basariyla bittiginde sonuc verilerini temsil eden bir nesne yapisidir.
+
+
+
+
+3- Fetch API (Promise'in basitlestirilmis hali)
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
+
+
+https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+
+
+NOTE: 
+  //! error handling          BU YAPI ONEMLI HEP KULLANILIYOR
+    if (!res.ok) {
+      throw new Error(`Something went wrong: ${res.status}`);
+    }
+    return res.json();
+
+
+
+
+
+
+
+
+
+
+
