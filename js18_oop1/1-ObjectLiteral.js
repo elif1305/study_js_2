@@ -7,6 +7,7 @@
 // bu programlamada her sey objelerden meydana geliyor.
 // js in en temel nesnesi objecttir. her sey objeden uretilmistir diyebiliriz.
 // js prototype tabanlı OOP kullanır. diğer OOP dilleri class-based OOP kullanır.
+// protoypr - based olmasinin amaci bellek kullanimini efekktif hale getirmek icin.
 
 const book1 = {
     title : "The Brothers Karamazov",
@@ -26,7 +27,7 @@ const book2 = {
     title : "the lily of the valley",
     author : "Honero de Balzac",
     year : 1835,
-    getSummary : function () {
+    getSummary : function () {              // getSummary fonk. her seferinde objeinin icine yazilmasin(yer kaplar) 1 kez yazilsin(ata objeye) refere edilerek diger objelere cagrilsin.
         return `${this.title} was written by ${this.author} in ${this.year}`;
     },
 };

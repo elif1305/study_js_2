@@ -9,6 +9,7 @@
 //* alabilmesini tanimlayan bir nesne-yonelimli programlama teknigidir.
 //* Polymorphism, genellikle Overloading ve Overriding gibi alt kavramlar ile bilinir.
 
+
 class Book {
     constructor(title, author, year) {
       this.title = title;
@@ -38,6 +39,8 @@ class Book {
         this.month = month ;
     }
   }
+
+  //* constructor yapici bir fonksiyondur.Yeni bir instance olustururken(new ile) cagrilir. 
 
   const mag1 = new Magazine('Kasagi', 'Omer Seyfettin', 1920, 'Nov');
 
