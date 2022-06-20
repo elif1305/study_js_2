@@ -9,6 +9,7 @@
 //* alabilmesini tanimlayan bir nesne-yonelimli programlama teknigidir.
 //* Polymorphism, genellikle Overloading ve Overriding gibi alt kavramlar ile bilinir.
 
+//! ANA KALIP OLUSTURMA;
 
 class Book {
     constructor(title, author, year) {
@@ -23,15 +24,20 @@ class Book {
     getSummary() {
       return `${this.title} was written by ${this.author} in ${this.year} `;
     }
-}
+  }
+  
+  
+//! COGALTMA ;
   
 //? instance
-const book1 = new Book('Kasagi', 'Omer Seyfettin', 1920);
-const book2 = new Book('Sinekli Bakkal', 'H.Edip Adıvar', 1910);
+  const book1 = new Book('Kasagi', 'Omer Seyfettin', 1920);
+  const book2 = new Book('Sinekli Bakkal', 'H.Edip Adıvar', 1910);
   
-console.log(book1);
+  console.log(book1);
+  
+  
+//! ANA KALIPTAN BASKA BIR KALIP URETME ;
 
-//? sub-class tanimlamasi
 class Magazine extends Book {
     constructor(title, author, year, month){
         //! book un constructorr i cagrildi.
@@ -39,6 +45,9 @@ class Magazine extends Book {
         this.month = month ;
     }
 }
+
+
+//* BOOK KALIBINDAN (ANA KALIPTAN) URETILEN MAGAZIN ANA KALIBINDAN COGALTMA YAPMA;
 
 //* constructor yapici bir fonksiyondur.Yeni bir instance olustururken(new ile) cagrilir. 
 

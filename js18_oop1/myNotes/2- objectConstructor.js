@@ -8,9 +8,8 @@
 //* Object prototipi, prototip miras zincirinin en tepesinde yer almaktadir.
 //* Ornegin Date and Array nesneleri Object.prototype'dan miras almaktadir.
 
-// OOP gerçek dünyada temsil edilen kalıtım, soyutlama, vb kavramları programlama dünyasında temsil etmeye çalışılmasıdır.
 
-//? object Constructor
+//! ANAYAPI :
 
 function Book(title, author, year){     // fonksiyonun ismi buyuk harfla baslar. bu bir obje demek icin gostergedir.
     this.title = title;                // this bulundugu yerdeki objeyi refere eder, yani book u
@@ -21,7 +20,9 @@ function Book(title, author, year){     // fonksiyonun ismi buyuk harfla baslar.
     }
 }
 
-//? Instance
+
+//! COGALTMA :
+
 const book1 = new Book('Kasagi', 'omer seyfettin', '1920');
 const book2 = new Book('Sinekli Bakkal', 'H.Edip Adivar', '1910');
 
@@ -31,9 +32,22 @@ console.log(book2.getSummary());
 book1.price = 100;              // yeni gelen property sadece book1 e eklendi. kalibi degistirmedik sadece book1 de degisiklik yaptik.
 console.log(book1, book2);
 
-//! Eger yeni bir proprty veya fonksiyonu constructor a eklemek istersek prototypr i kullanabliriz.
 
-Book.prototype.getAge = function () {
+
+
+//! YENI PROPERTY EKLEME (Instance a) :
+
+book1.price = 100;              // yeni gelen property sadece book1 e eklendi. kalibi degistirmedik sadece book1 de degisiklik yaptik.
+console.log(book1, book2);  // book2 de price property si olmaz.
+
+
+
+
+//! ANA KALIBA YENI PROPERTY EKLEME :
+
+//? Prototype ile ekliyoruz.
+
+Book.prototype.getAge = function () {      // getAge diye bir fonk yazip bunu ana kaliba ekliyoruz.
     return new Date().getFullYear() - this.year ;
 };
 
@@ -43,6 +57,8 @@ console.log(book1.getAge());
 console.log(book2.getAge());
 console.log(Book);
 
+
+//! PROTOTYPE ERISIMI
 
 //! Prototype, belirli bir Nesne'nin (Object) tum instance'larina kolay bir
 //! sekilde metotlar tanimlamaya izin vermektedir.
@@ -63,24 +79,27 @@ console.log(Book.prototype);
 console.log(book1.__proto__);   
 
 
-// js prototype basic bir dildir. oop acisindan.  bellek yonetimi icin prototype gelistirilmis. avantajli bir yontemdir.
-// dezavantaji guvenlik konusu.global sakalama alani guvenlik acisindan sikinti olusturablir.
 
-//? INHERITANCE (Kalitim - ES5)
+//! ANA KALIPTAN BASKA BIR KALIP URETME ;
 
-// OR ; Book kalibindan baska bir kalip uretmek mumkun mu? evet.
+//*book const.(kalibindan) dan Magazin const.(kalip) uretme: 
 
-//*book const. dan Magazin const. uretme: 
 function Magazin (title, author, year, month) {          // magazin conts. icerisinde book const. i cagiriyoruz, ortaklari cagiriyoruz ve monthu da biz ekstra ekliyoruz.
     Book.call(this, title, author, year)               // this book u temsil eder , 
     this.month = month ;                          // this Magazini temsil eder
 }
 
-//! prototypelar dogrudan miras olarak gelmezz.
+
+//* PROTOTYPE EKLEME;
+
+//! prototypelar dogrudan miras olarak gelmezz. bilincli olara yapilmistir. eger alinsaydi eklene eklene prototype siserdi.
 console.log(Magazin.prototype);
 
 Magazin.prototype = Object.create(Book.prototype);   // book un prototype ini al ve magazin in prototypine kopyala.
 console.log(Magazin.prototype);
+
+
+//* BOOK KALIBINDAN (ANA KALIPTAN) URETILEN MAGAZIN ANA KALIBINDAN COGALTMA YAPMA;
 
 //? magazine nesnesinde bir instance olusturulmasi:
 const mag1 = new Magazin('Scientific Research', "Einstein", 1985, "September");
