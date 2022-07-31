@@ -1,0 +1,208 @@
+JS-1
+
+-> ENVIRONMENT
+
+Generally there are 3-4 distinct phases;
+1- development  ( BIZIM CALISACAGIMIZ YER)
+2-testing
+3-staging(could be combined with testing)
+4-production   ( canliya cikmasi, urun haline getirilmesi)
+
+-> JS NEDIR?
+
+dili icat eden: brendan eich (10 gunde)
+JS is highlevel , cross-platform
+high-level : bellek yonetimi hususlari ile ugrasilmiyor, programlamayi kolaylasitiriyor
+cross-platform : her ortamda her browserda calisir, telefonda bilgisayarda , tablette
+object orianted : 
+dynamism saglar
+object orianted computer programming language
+ilk adi mocha
+js is used to create client-side dynamic pages
+its also one of the core technologies of the web, along with HTML and CSS .
+
+NOT : JS IS VERY CASE SENSITIVE !!  
+
+What is Javascript?
+➤ JavaScript is a high-level, cross-platform, object-oriented computer programming language.
+
+JavaScript was developed by Brendan Eich, a developer at Netscape, in 1995. 
+JavaScript initial name was Mocha, and was briefly named LiveScript before being officially renamed to JavaScript. 
+It is a scripting language executed by browsers, and used with HTML to develop responsive webpages.
+
+➤ It is also one of the core technologies of the web, along with HTML and CSS.
+
+➤ JavaScript is the most commonly used to create client-side dynamic pages.
+
+➤ Today, JavaScript can execute not only in the browser, but also on the server, or actually on any device that 
+has a special program called the JavaScript engine.
+
+
+-> ECMAScript 2015 (ES6)
+
+Standart kurallardir.
+ECMA( European Computer Mnufacturers Association) nin olusturudugu standartlardir.
+is a scripting language specification intended to standardize JS.
+JS icin es6 kirilma noktasidir.
+<head> e de ekleneblir.
+NOT : body nin en sonuna eklenmesi tavsiye edilir.(kapatma body taginin hemen ustune. !!-
+
+ECMAScript 2015 (ES6)
+➤ ECMAScript (ES) is a scripting language specification intended to standardize JavaScript.
+
+➤ ECMAScript 2015, which is also known as ECMAScript 6 and ES6, 
+is the sixth edition of the ECMAScript Language Specification standard.
+
+➤ ES6 provides a new set of features and fixes to JavaScript.
+
+★ We’re going to dive into what' difference between ES6 and predecessors.
+
+🎗️ Commonly Asked Questions:
+How do I get JavaScript?
+Where can I download JavaScript?
+Is JavaScript Free?
+
+You don't have to get or download JavaScript.
+JavaScript is already running in your browser on your computer, on your tablet, and on your smart-phone.
+Free to use for everyone.
+
+-> JSON 
+
+JS OBJECT NOTATION : bir datayi js imsi tarif ettigimiz dosyaya denir. internette cok kullanilan bir formattir. veri aksiinda kolaylik saglar.
+sunucu ile frontend backend arasinda haberlesme json ile daha kolay oluyor.
+
+-> console u acma yontemleri:
+1.yontem : F12
+2. yontem : Browserda saga tikla, inspect
+3. yontem : ctrl +  shift + i
+
+-> prompt
+kullanican veri almak icin
+
+-> confirm
+yes no sorusu icin, veya herhangi bi soru icin
+
+-> Comments
+single line:  //
+multi line : /*  */
+
+Interaction
+There are different ways to "display" data in JavaScript.
+
+➤ console.log().
+
+console.log() will be your best friend on front-end programming.
+
+➤ document.write().
+
+➤ window.alert().
+
+➤ window.prompt().
+
+➤ window.confirm().
+
+======================
+  VARIABLES
+======================
+
+What is a Variable?
+In computer programming, a variable , either known or unknown, a container for storing data with a given name.
+
+var, let, const
+rakamla baslamaz,
+const ile tekrar atama yapilamaz
+let ile yapilabilir
+ES6 ile const ve let geldi. ( var in kullanimi artik tavsiye edilmiyor.)
+
+NOT : casesensitive unutma!
+⚠️ Warning ! :
+JavaScript is case sensitive. This means that the variables myNumber, mynumber or MYNUMBER are not same variables. 
+All of them are different variables.
+
+
+-> Naming rules:
+can use : letters, digits, underscores, dolarsign
+numbers are not allowed as the first character
+first character must be: a letter, an underscore. a dola sign
+must not contain : spaces, math or logical operators
+reserced words can not be used.
+
+Naming Rules
+The general rules for defining names for variables:
+
+➤ Names can composed of letters, digits, underscores, and dollar signs.
+➤ Numbers are not allowed as the first character.
+➤ The first character must be;
+   ●a letter
+   ●an underscore ( _ )
+   ●a dollar sign ($)
+
+➤ JavaScript names must not contain spaces, mathematical or logical operators.
+
+➤ Reserved words cannot be used as names
+
+Naming Conventions
+➤The camel case naming convention is widely used in JavaScript.
+ Following that, we'll take a more in-depth look at some of the other conventions.
+➤PascalCase
+also known as UpperCamelCase or StudlyCase ; is a naming convention in which 
+the first letter of each word in a compound word is capitalized.
+➤ SCREAMING_SNAKE_CASE
+also known as MACRO_CASE, CONSTANT_CASE; refers to the style of writing in which each space is replaced by an underscore (_) character, and the first letter of each word written in Uppercase.
+➤ kebab-case
+Similar to snake case, above, except hyphens (-) rather than underscores (_) are used to replace spaces. It is commonly used in CSS.
+➤ snake_case
+refers to the style of writing in which each space is replaced by an underscore ( _ ) character, and the first letter of each word written in lowercase.It is a commonly
+ used for variable and subroutine names, and for filenames in python.
+
+
+-> Scope
+Global scope
+Function scope
+Block scope
+
+
+-> STACK and HEAP
+
+Verileri 2 alanda tutar.
+
+Stack and Heap
+JavaScript doesn’t store all these things at the same place. What JavaScript does instead is it uses two places. These places are stack and memory heap.
+
+The Stack
+➤ The stack is a place that JavaScript uses to store only static data. This includes primitive data types values. For example, numbers, strings, booleans, 
+undefined and null. These static data also include references. 
+These references point to objects and functions you’ve created.
+
+➤ These data have one thing in common. The size of these data is fixed and JavaScript knows this size at compile time. This also means that JavaScript knows how much memory it should allocate, and allocates that amount.
+
+There is one important thing about static data and memory. There is a limit to how large these primitive values can be. This is also true for the stack itself.
+
+The Heap
+➤ The second place where JavaScript can store data is memory heap. Which data are stored in memory heap? While the stack is a place where JavaScript stores static data, memory heap is a place where JavaScript stores objects and functions. So, remember, when you create with primitives, you are working with static data. JavaScript stores these static data in the stack.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -10,26 +10,31 @@ console.log('****** LOOPS *******');
 // Math.round() => değerine göre yuvarlar.
 // Math.trunc() => kesirli sayının tam kısmı alır.
 
-for (let i = 1; i <= 10; i++) {
-  const randomSayi = Math.floor(Math.random() * 100 + 1);
-  console.log(randomSayi);
-}
+// for dongusunun icine girilmesi icin kosulun dogru olmasi gerekir.
+// adedi belli ise , sayisi belli olanlarda for kullanimi daha uygundur.
 
-console.log('Program bitti');
 
-//? Ornek: 1 den n kadar sayıları toplayan kodu yazınız.
+// for (let i = 1; i <= 10; i++) {
+//   const randomSayi = Math.floor(Math.random() * 100 + 1);
+//   console.log(randomSayi);
+// }
 
-const n = prompt('n sayisini girinz:');
-let toplam = 0;
-for (let i = 1; i <= n; i++) {
-  toplam += i;
-}
+// console.log('Program bitti');
 
-console.log('Toplam:', toplam);
+// //? Ornek: 1 den n kadar sayıları toplayan kodu yazınız.
+
+// const n = prompt('n sayisini girinz:');
+// let toplam = 0;
+// for (let i = 1; i <= n; i++) {
+//   toplam += i;
+// }
+
+// console.log('Toplam:', toplam);
 
 //? ÖRNEK: Dışarıdan girilen sayının Asal olup olmadığını tespit ederek sonucu yazdıran programı yazınız.
 
 //******************** WHILE ******************
+
 
 // let i = 1;
 // while (i <= 5) {
@@ -84,22 +89,22 @@ console.log('Toplam:', toplam);
  */
 
 
-  let hak = 5
+  // let hak = 5
 
-  const rastgeleSayi = Math.floor(Math.random()*100 +1)
+  // const rastgeleSayi = Math.floor(Math.random()*100 +1)
 
-  do{
-    const tahmin = prompt("lutfen 0-100 arasinda bir sayi giriniz")
-    hak -= 1;
-    if (tahmin === rastgeleSayi){  /*buraya === konuldugu icin promtu number yapmamiz gerekiyor. cuku promtan gelen deger stringtir. === bu tipininde degerinin de esitolmasi demektir. bunu yapmazsak sonucu yanlis buluruz. */
-      console.log(`tebrikler ${5-hak} denemede bildiniz`);
-      break;
-    }else{
-      console.log(`dikkat ${hak} hakkiniz kaldi`);
-      if(tahmin< rastgeleSayi){
-        console.log("arttir");
-      }else{
-        console.log("azalt");
-      }
-    }
-  } while(hak > 0)
+  // do{
+  //   const tahmin = prompt("lutfen 0-100 arasinda bir sayi giriniz")
+  //   hak -= 1;
+  //   if (tahmin === rastgeleSayi){  /*buraya === konuldugu icin promtu number yapmamiz gerekiyor. cuku promtan gelen deger stringtir. === bu tipininde degerinin de esitolmasi demektir. bunu yapmazsak sonucu yanlis buluruz. */
+  //     console.log(`tebrikler ${5-hak} denemede bildiniz`);
+  //     break;
+  //   }else{
+  //     console.log(`dikkat ${hak} hakkiniz kaldi`);
+  //     if(tahmin< rastgeleSayi){
+  //       console.log("arttir");
+  //     }else{
+  //       console.log("azalt");
+  //     }
+  //   }
+  // } while(hak > 0)

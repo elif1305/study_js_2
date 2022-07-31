@@ -1,0 +1,203 @@
+===================
+  DATA TYPES
+====================
+
+➤ JavaScript variables can hold numerous data types, such as numbers, strings, booleans, and more.
+
+➤ To find the type of a JavaScript variable, we can use the JavaScript typeof operator.
+
+➤ Primitive Data Types:
+
+● undefined : typeof aValue === "undefined"
+
+● null : typeof aValue === "object" (*)
+
+● Number : typeof aValue === "number"
+
+● String : typeof aValue === "string"
+
+● Boolean : typeof aValue === "boolean"
+
+● BigInt : typeof aValue === "bigint"
+
+● Symbol : typeof aValue === "symbol"
+
+let aValue;
+console.log("1. " + typeof aValue);
+aValue = null; // beware: null is a value, not a reference
+console.log("2. " + typeof aValue);
+aValue = 42;
+console.log("3. " + typeof aValue);
+aValue = "Clarway";
+// aValue = 'Clarway';
+// aValue = `Clarway`;
+// 👆 3 ways to define a string
+console.log("4. " + typeof aValue);
+aValue = true;
+console.log("5. " + typeof aValue);
+aValue = 1234567890123456789012345678901234567890n;
+console.log("6. " + typeof aValue);
+aValue = Symbol("Clarway");
+console.log("7. " + typeof aValue);
+aValue = { firstName: "John", lastName: "Doe" };
+console.log("8. " + typeof aValue);
+
+1. undefined  : tanimlanmis ama deger atamasi yapilmamis demek, hata degildir, veri tipidir.. ( is not defined : bir hatadir, hic tanimlanmadi demek.)
+2. object
+3. number
+4. string
+5. boolean
+6. bigint
+7. symbol
+8. object
+
+
+-> undefined
+Tanimlanmis ama deger atamasi yapilmamis demek, hata degildir, veri tipidir.. ( is not defined : bir hatadir, hic tanimlanmadi demek.)
+
+INTERVIEW :
+
+console.log(a);
+var a = 3;
+
+=> undefined verir.
+
+var ile tanimlandiginda bu tanimlar en uste cikar.
+a degeri tanimlanmis ama degeri clg den sonra verildigi icin undefined verir.
+
+console.log(a);
+let a = 3;
+
+console.log(a);
+const a = 3;
+
+=> hata verir cunku let ve const ile tanimlanan degerler (var gibi) en uste cikmaz.
+
+
+NOT : PROMPTAN ALINAN DEGERLER BIZE HER ZAMAN STRING DONDURUR. !!
+
+
+-> NULL
+
+Primitive data tipi olarak gecer fakat tipine baktigimizda object doner. (js hatasidir)
+
+
+-> NUBMBER
+3.14
+1300
+1_000_000
+
+NOT : isNaN ile number olup olmadigini kontrol edilir.
+
+NOT : console.log(015 + 025);
+basina 0 koydugumuzda 7lik(octal) sisteme geciyor.
+cevap  34 cikar.
+
+let num1 = 015;
+let num2 = 025;
+let result = num1 + num2;
+console.log(`result is ${result}`); // result is 34
+num1 = 15;
+num2 = 025;
+console.log(`result is ${result}`);// result is 36
+num1 = 015;
+num2 = 25;
+console.log(`result is ${result}`);// result is 38
+num1 = 15;
+num2 = 25;
+console.log(`result is ${result}`);// result is 40 isn't it weird?
+let numOctal = 0o1234567;
+
+Hexadecimal;
+
+let myNumber = 0x5AD;
+console.log(myNumber);
+// myNumber equals to 1453 in decimal
+
+-> STRING
+
+escape karakter \ 
+kendisinden sonrakini islevsiz yapar.
+
+-> BOOLEANS
+true, false
+
+true degerler;
+Boolean("Hello World");
+Boolean(5);
+Boolean(-5);
+Boolean("false");
+Boolean('0');
+Boolean(3.14 + 8);   //All of these values return true
+
+false degerler,
+1- bos string '', ""
+2- 0 degeri
+3- -0 degeri
+4- null
+5- undefined (ornek :  let s; )
+
+Boolean("");
+Boolean(0);
+Boolean(-0);
+Boolean(null);
+let x;
+Boolean(x);   //All of these values return false
+
+
+===
+OBJECTS
+===
+
+js de hersey objedir.
+degerleri heapte tutulur.
+birden fazla veri bir arada tutulablir.
+
+➤ Objects in JavaScript, just as in many other programming languages, can be compared to objects in real life. 
+The concept of objects in JavaScript can be understood with real life, tangible objects.
+
+const myCar = new Object();
+myCar.make = 'Ford';
+myCar.model = 'Mustang';
+myCar.year = 1969;
+
+myCar['make'] = 'Ford';
+myCar.model = "Mustang";
+myCar.color = 'Red';
+console.log(myCar.color); //Red 
+
+
+-> Operators
+Assignment Operators
+Arithmetic Operators
+Comparison Operators
+Logical Operators
+Other Operators
+
+
+NaN == NaN  FALSE
+null == null TRUE
+
+🎗️ Note:
+The following values are always falsy:
+false
+0 (zero)
+-0 (minus zero)
+0n (BigInt zero)
+'', "", `` (empty string)
+null
+undefined
+NaN
+Everything else is truthy:
+
+'0' (a string containing a single zero)
+'false' (a string containing the text “false”)
+[] (an empty array)
+{} (an empty object)
+function(){} (an “empty” function)
+
+null + 3
+
+= 3 tur
+
+string ve integer in toplami stringtir.
