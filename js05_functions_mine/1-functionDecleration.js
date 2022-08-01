@@ -14,7 +14,6 @@ function yazdir(){  // decleration
 
 yazdir()  // invoke
 
-
 console.log(typeof yazdir); // tipi function
 
 //************************************************************ 
