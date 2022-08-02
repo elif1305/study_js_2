@@ -88,7 +88,7 @@ console.log(word.lastIndexOf('be'));  // 16.  son nerde gordugunu verir
 console.log(word.lastIndexOf('BE'));  // -1  olmadigi zaman -1 dondurur. bir fonksyion negatif bir deger donduruyorsa aranana yok demekir.The reason it returns -1 instead of “false” is that a needle at the beginning of the string would be at position 0, which is equivalent to false in Javascript. So returning -1 ensures that you know there is not actually a match.
 
 //* ----------------------------------------------------------
-//* startsWidth() -  , endsWith()  - case senstive
+//* startsWith() -  , endsWith()  - case senstive
 //* ----------------------------------------------------------
 
 
