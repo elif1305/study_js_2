@@ -92,7 +92,7 @@ const kisi = {
     meslek : 'developer',
     ehliyet: 'var',
     yasHesapla : function() {
-        return new Date().getFullYear() - this.dogum ;   // burada sadece dogum yazarsa hata verir, dogum bi degisken degil , key yani property , bu haat verir, o yuzden ya this.dogum ya da kisi.dogum yazilmali
+        return new Date().getFullYear() - this.dogum ;   // burada sadece dogum yazarsa hata verir, dogum bi degisken degil , key yani property , bu hata verir, o yuzden ya this.dogum ya da kisi.dogum yazilmali
     },
     ozet : function() {  // burada arrow funtion kullanmak uygun degil. kullanma.  interview da cikmis bir soru. aciklamasi asagida.
         return `${this.ad}, ${this.yasHesapla()} yasindadir.`

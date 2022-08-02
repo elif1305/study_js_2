@@ -122,7 +122,8 @@ const vehicles = ["bmw", "reno", "mercedes", "ferrari", "anadol"];
 
 const [vec1, vec2, ...restVehicles] = vehicles;  // vec1 = bmw vec2= reno  ... = geri kalani restVehicles altinda baska array a ata demek
 
-// restin sonra olmasi gerkiyor, ortaya alamiyoruz
+//! restin sonda olmasi gerkiyor, ortaya alamiyoruz
+//! alis sirasi onemli
 
 console.log(vec1, vec2);
 console.log(restVehicles);
@@ -137,6 +138,7 @@ const personel = {
   age: 30
 };
 
+//!obj oldugu icin alis sirasi onemli degildir.
 const {pName, job, ...surnameAge} = personel;
 console.log(pName, job, surnameAge);
 
@@ -161,6 +163,8 @@ console.log(hepsiniTopla(1, 2, 3, 4, 5, 6));
 //? ------------------------------------------------------
 //?  SPREAD
 //? ------------------------------------------------------
+
+//! dizileri birbirine eklemek icin kullanilan guzl bir yontemdir.
 
 const araclar = ['Ucak', 'Helikopter', 'Bisiklet'];
 const otomobiller = ['Tir', 'Otobus', 'Araba', 'SUV'];
