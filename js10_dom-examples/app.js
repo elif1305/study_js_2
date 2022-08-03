@@ -9,6 +9,7 @@ const dilSection = document.querySelector("#dil-section");
 const ul = document.createElement('ul');  // tirnak icinde gosterdigin elementi ekler , fakat su an nereye akleyecegi belli degil
 dilSection.appendChild(ul);   // buradaki ul , yukardaki const ile olusturudugumuz ul .
 
+//! not : duruma gore css dosyasi bootstrapi ezsin diye , css linkini bootstrap linkinin altina bagliyoruz.
 
 //* SELECTORS
 //******************************************* */
@@ -23,7 +24,7 @@ console.log(dilSection.parentNode.parentNode);  // dilsection in parentinin pare
 
 //? closest() : ilk buldugu, en yakin parenti bulur
 const h1 = ul.closest(".container").firstElementChild;  // closest : yakinlarina bak demek. burada yazilan kodun tanimi : ul nin yakinlarina bak , ve classi container olani bul.
-// const h1 = ul.closest(".container").firstChild ;  // bu bize yaziyi verir
+// const h1 = ul.closest(".container").firstChild ;  //! (firstChild) bu bize icindeki yaziyi verir
 console.log(h1);
 
 // h1 i yakaladik, rengini kirmizi yapalim.
@@ -91,6 +92,6 @@ dilInput.addEventListener('keydown', (e) =>{  // KEYDOWN : tusa basildiginda dem
 //* SAYFA ACILINCA INPUT A FOCUS OLMASI ICIN
 
 window.onload = () => {   // window yuklendiginde
-    javascriptKontrol(); // sayfa yuklenir yuklanmeez bu fonksyionu kontrol et ve 
+    javascriptKontrol(); // sayfa yuklenir yuklanmeez bu fonksyionu kontrol et (onceden yazilmislari yukledigimizde o yazilanlari da kontrol etmesi icin)ve
     dilInput.focus();  // inputa focuslan
 }

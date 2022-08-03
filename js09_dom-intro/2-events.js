@@ -4,6 +4,7 @@
 
 console.log('****** EVENTS *******');
 
+// js e dinamizm saglayan islemlerdir.
 //DOM sayesinde JavaScript, HTML olayları ile etkileşimi halinde olabilir.
 //• Örneğin, kullanıcı bir HTML elemanına tıkladığında (bir olay meydana geldiğinde) bir Javascript kodu çalıştırılabilir.
 //• Bir olay meydana geldiğinde bir JS kodu çalıştırmak için ilgili elemanın olay özelliği kullanılır.
@@ -68,3 +69,6 @@ button.addEventListener("click", function(event){  // burada genelde func. icine
     document.querySelector("body").style.backgroundImage = "linear-gradient(to right,purple, yellow)";
     button.textContent = "Search";
 })
+
+
+// event in ayrintilarini gorebliriz. function(event (ya da e) ve clg(event) yazarak ayrintilari console da gorebliriz. yukaridaki ornekteki gibi.

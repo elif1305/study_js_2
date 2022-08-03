@@ -11,3 +11,5 @@ section .diller {
 .red{
     color: red;
 }
+
+/* duruma gore css dosyasi bootstrapi ezsin diye , css linkini bootstrap linkinin altina bagliyoruz. */
