@@ -31,16 +31,19 @@
 //? Zincirleme olarak kullanilabilirler.
 
 //! STEP1
-// const myPromise = new Promise((resolve, reject) => {    // burada  resolve ve reject olarak yazilmis olmsi onemli degil. onemli olan orada yazilan parametrelerin neye karsilililk geldigi. yani orada res , rej de yazilablir ama karsiliklarinin ne oldugunun bilinmesi onemli.
+// const myPromise = new Promise((resolve, reject) => {    //? burada  resolve ve reject olarak yazilmis olmsi onemli degil. onemli olan orada yazilan parametrelerin neye karsilililk geldigi. yani orada res , rej de yazilablir ama karsiliklarinin ne oldugunun bilinmesi onemli.
 //     resolve('Task performed successfly');
 //     reject(new Error('Task Failed'));
 //   }
 // );
 
+//myPromise.then((res) => console.log(res)).catch((err) => console.log(err)
+// aciklamasi : istek yapildi cevap basirili bir sekilde geldiyse then pnu yakaliyor ve console a yazdiriyor(mesela DOM a da gonderebliriz vs). eger basarisiz olursa catch e geliyor ve onu yapiyor.
+
 //! STEP2
 const myPromise = new Promise((resolve, reject) => {    // burada  resolve ve reject olarak yazilmis olmsi onemli degil. onemli olan orada yazilan parametrelerin neye karsilililk geldigi. yani orada res , rej de yazilablir ama karsiliklarinin ne oldugunun bilinmesi onemli.
   let success = Math.floor(Math.random() * 5);
-  const data = { a: 1, b: 2 };
+  const data = { a: 1, b: 2 };                        // ornek : api den gonderilen data yani veri
   if (success) {
     resolve(data);
     console.log('Task performed successfly');
@@ -53,7 +56,7 @@ console.log(myPromise);
 
 myPromise.then((res) => console.log(res)).catch((err) => console.log(err));
 // NOTE ; then,catch ler arka arkaya yazilablir. birden fazla sekilde.
-// 
+
 
 //* Example-2: TEA TIME
 //* -----------------------------------------------------------------------

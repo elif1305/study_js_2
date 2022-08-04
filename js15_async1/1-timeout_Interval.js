@@ -4,6 +4,30 @@
 
 //! Javascript, bir single-threaded ve Asenkron Programlama dilidir.
 
+// javaScript is a single-threaded language, which means it has only one call stack that is used to execute the program. The call stack is the same as the stack data structure that you might read in Data structures.
+
+// Javascript is a single threaded language. This means it has one call stack and one memory heap. As expected, it executes code in order and must finish executing a piece code before moving onto the next. It's synchronous, but at times that can be harmful. For example, if a function takes awhile to execute or has to wait on something, it freezes everything up in the meanwhile.
+
+//A good example of this happening is the window alert function. alert("Hello World")
+
+// kol process , parmaklar thread dir.
+// ornegın vscode calisirken yapacagi isleri processlere boluyor, her bir processın altında ıs parcacıkları yanı treadler var.
+
+// Open your console and type window then press enter. You'll see most everything the Web API has to offer. This includes things like ajax calls, event listeners, the fetch API, and setTimeout. 
+
+//Let's look at a simple example, run this code your console:
+// console.log("first")
+// setTimeout(() => {
+//     console.log("second")
+// }, 1000)
+// console.log("third")
+
+// What did we get back?
+// first
+// third
+// undefined
+// second
+
 //? Asenkron Programlama
 //? --------------------------------------------------------------
 //? Synchronous : sirali calisan kodlar, cok uzun kodlarda calismasi cok zaman alir.
@@ -65,14 +89,18 @@
 //* Asenkron (setInterval, clearInterval)
 //*----------------------------------------------------------
 
+// her bir saniyede bir counteri arttir
+// her bir saniye de bir bu interval icine yazilan arrow function i yap
+// ornek : sitemizde doviz kuru gosteren bir yer var. API den veri cekiyor. setInterval kurularak ornegin her 5 dk da bir APIden veri cekmesi saglanabilir.
+
 // console.log('Counter Started');
 // let counter = 0;
 
 // const sec1 = setInterval(() => {
 //   //!non-blocking
 //   console.log(++counter);
-//   if (counter > 9) {
-//     clearInterval(sec1);      // intervali durdurmak icin
+//   if (counter > 9) {         //? clearInterval sarta bagli olmalidir
+//     clearInterval(sec1);      //? intervali durdurmak icin
 //   }
 // }, 1000);
 
@@ -104,6 +132,6 @@ setTimeout(() => {
 //* 1- XMLHttpRequest (Eski yontem, Ornek: AJAX)
 //? https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
 //* 2- Promise,
-//! 3- Fetch API (Promise'in basitlestirilmis hali),
-//! 4- ASYNC-AWAIT (Fetch API'nin makyajlanmis hali)
+//! 3- Fetch API (Promise'in basitlestirilmis hali, en cok kullanilan yontem 2),
+//! 4- ASYNC-AWAIT (Fetch API'nin makyajlanmis hali, en cok kullanilan yontem 1)
 
