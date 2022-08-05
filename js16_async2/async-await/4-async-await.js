@@ -24,7 +24,7 @@
 
 
 //! await ler ile siraya koyuyoruz.ustteki await once calisir, sirayla asagiya iner.
-//* asagidaki ornekte try catch blogu kullandik
+//* asagidaki ornekte try catch blogu kullandik. hata tespit blogu . ONEMLIDIR !
 
 let hata = false;
 const getUsers = async function () {   //! step 1
@@ -32,14 +32,14 @@ const getUsers = async function () {   //! step 1
     const res = await fetch('https://api.github.com/users');    //! step 2
     if (!res.ok) {    //! step 3
       hata = true;
-      // throw new Error(`Something went wrong:${res.status}`);
+      // throw new Error(`Something went wrong:${res.status}`);  // buradaki throw error u silmezsek kod asagiya inmez, bu nedenle de hata kodunu goremeyz.
     }
     const data = await res.json();  //! step 4
     updateDom(data);
   } catch (error) {  //! step 5
     console.log(error);
-  } finally {
-    hata = false;
+  } finally {            // try a da girse catche de girse her turlu finally i calisir. en sonda.
+    hata = false;   // bu ornek icin hata=false a cokta gerek yok sayfa yenilendiginda zaten terardan false a gececek
   }
 };
 

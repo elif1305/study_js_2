@@ -13,7 +13,7 @@ const fetchCountry = async (name) => {  //! step 1
       throw new Error();
     }
     const data = await res.json(); //! step 3
-    renderCountry(data[0]);
+    renderCountry(data[0]);                      // cekilen veri array olarak geldigi icin , icindeki objeye erismk icin 0. elemanini aliyoruz.
   } catch (error) {
     console.log(error);
   }
@@ -34,7 +34,7 @@ const renderCountry = (country) => {
   //!destr
   const {
     capital,
-    name: { common },
+    name: { common },     // burada common i da desct. yaptik.(desc yaptigimiz bir degerin icinde bir desc daha yapabliriz) ama name.common olarakta yazabliriz.
     region,
     flags: { svg },
     languages,
@@ -46,7 +46,7 @@ const renderCountry = (country) => {
   // console.log(Object.values(currencies)[0].name);
   // console.log(Object.values(currencies)[0].symbol);
 
-//! note : array icerisinde yine bir obje oldugu icin her bir ulkede bu key farkli olacak bu nedenle object values ile erisebiliriz.
+//! not : array icerisinde yine bir obje oldugu icin her bir ulkede bu key farkli olacak bu nedenle object values ile erisebiliriz.   OBJETCT.VALUES(): VALUES LARI ALMAK ICIN, OBJECT.KEYS() : KEYLERI ALMAK ICIN
 
   countriesDiv.innerHTML += `
 
@@ -58,12 +58,12 @@ const renderCountry = (country) => {
     </div>
     <ul class="list-group list-group-flush">
       <li class="list-group-item"> <i class="fas fa-lg fa-landmark"></i> ${capital}</li>
-      <li class="list-group-item"> <i class="fas fa-lg fa-comments"></i> ${Object.values(
+      <li class="list-group-item"> <i class="fas fa-lg fa-comments"></i> ${Object.values(        //OBJETCT.VALUES(): VALUES LARI ALMAK ICIN,
         languages
       )}</li>
 
       <li class="list-group-item"> <i class="fas fa-lg fa-money-bill-wave"></i> ${
-        Object.values(currencies)[0].name
+        Object.values(currencies)[0].name                  // currencies in 0 elemani bize obj dondurdugu icin 0. elemanini aliyoruz.
       }, ${Object.values(currencies)[0].symbol} </li>
 
     </ul>

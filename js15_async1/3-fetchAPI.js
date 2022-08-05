@@ -14,12 +14,12 @@
 // fetch(adres).then().then().catch()     // default u get tir.
 // chaining yapisi/ fetch then e then obur then e o catshe iletiyor.
 
-fetch('https://api.github.com/users')              // veri almak istenilen adresi dogrudan yaziyorsun. fetch in default degeri get tir.
+fetch('https://api.github.com/users')              // veri almak istenilen adresi dogrudan yaziyorsun. fetch in default degeri get tir. virgul konulup yanina susli icinde method:put,pots,delete,fatch gibi islemleride yapabliriz. 
   .then((res) => {                                     // burada ham cevabi aldik, response u yani cevabi yakalar
     //! error handling          BU YAPI ONEMLI HEP KULLANILIYOR
     //! then yapisi geregi sadece response gelmediginde hata verir.(or internet gelmediginde gibi) fakat bunlar disinda hata algilanmiyor. bu nedenle !res.ok yaparak diger hatalarida buluyoruz.yani diger hatalar varsa onlarida yakalamak ve catche gondermek icin bunu yapiyoruz. ONEMLI
     if (!res.ok) {
-      throw new Error(`Something went wrong: ${res.status}`);  // res.status ile hatayi da belirtebliriz.
+      throw new Error(`Something went wrong: ${res.status}`);  // res.status ile hatayi da belirtebliriz.Bu yazilmazsa kod devam eder ve birsey dondurmeye calisir. ama donduremeyecegi icin hata verir.
     }
     return res.json();     // ham veriyi kullanmak icin json a ceviriyoruz.
   })                      // arrow func. lar otomatik return eder, fakat eger suslu parantez acuyildiysa return kullanilmalidir.
@@ -33,6 +33,7 @@ const updateDom = (data) => {
     userDiv.innerHTML += `
     <h2 class="text-warning">NAME:${login}</h2>
     <img src=${avatar_url} width="50%" alt="" />;
+    <h3>HTML_URL: ${html_url}</h3>
   `;
   });
 };
@@ -61,3 +62,11 @@ const updateDom = (data) => {
 //   `;
 //   });
 // };
+
+//! HATA KODLARI VE ANLAMLARI
+
+//Informational responses (100–199)
+// Successful responses (200–299)
+// Redirection messages (300–399)
+// Client error responses (400–499)
+// Server error responses (500–599)
