@@ -21,12 +21,13 @@ function createListElement(todo) {
   //? her bir todo objesini destructure yaptık
   const { id, content, isDone } = todo;
   todoUl.innerHTML += `
-     <li id=${id} class=${isDone ? 'checked' : ''} >
+     <li id=${id} class=${isDone ? 'checked' : ''} >  
       <i class="fa fa-check"></i>
       <p>${content}</p>
       <i class="fa fa-trash"></i>
     </li>`;
 }
+ // isdone varsa checked i gonder, class=${isDone && 'checked'} da yazilabiir.
 
 //? Baslangicta input aktif olsun
 window.onload = function () {
@@ -81,7 +82,7 @@ todoUl.addEventListener('click', (e) => {
   if (e.target.classList.contains('fa-check')) {
     // todos dizisindeki ilgili elementin isDone kismini güncelle
     todos.map((todo, index) => {
-      if (todo.id == id) {
+      if (todo.id == id) {             // ilk gele id number , localden okudugu string, bu nedenle === yapmiyoruz.
         todos[index].isDone = !todos[index].isDone;
       }
     });
