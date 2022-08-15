@@ -63,7 +63,7 @@ const javascriptKontrol = () => {
 }
 
 //? not: classname ile class verilirse varolan classi siler yenisini yazar
-//? claslist ile class verilirse seilmeden ekleme yapar
+//? classlist ile class verilirse seilmeden ekleme yapar
 
 
 //* SIL BUTONU 
