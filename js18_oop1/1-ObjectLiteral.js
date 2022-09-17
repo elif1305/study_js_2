@@ -9,6 +9,8 @@
 // js prototype tabanlı OOP kullanır. diğer OOP dilleri class-based OOP kullanır.
 // protoypr - based olmasinin amaci bellek kullanimini efekktif hale getirmek icin.
 
+
+
 const book1 = {
     title : "The Brothers Karamazov",
     author : "Dostoyevski",
@@ -20,8 +22,9 @@ const book1 = {
 
 console.log(book1);
 console.log(book1.getSummary());
-console.log(book1.toString()); //!obj nesnesinden miras yoluyla geldi.
+console.log(book1.toString());    //!  bj nesnesinden miras yoluyla geldi.
 
+//! js prototype-based bir dildir.
 
 const book2 = {
     title : "the lily of the valley",

@@ -8,10 +8,12 @@
 //* Object prototipi, prototip miras zincirinin en tepesinde yer almaktadir.
 //* Ornegin Date and Array nesneleri Object.prototype'dan miras almaktadir.
 
-// OOP gerçek dünyada temsil edilen kalıtım, soyutlama, vb kavramları programlama dünyasında temsil etmeye çalışılmasıdır.
+// OOP gerçek dünyada temsil edilen kalıtım, soyutlama, vb kavramları programlama dünyasında 
+//temsil etmeye çalışılmasıdır.
 
 //? object Constructor
 
+// KALIP-PROTOTYPE
 function Book(title, author, year){     // fonksiyonun ismi buyuk harfla baslar. bu bir obje demek icin gostergedir.
     this.title = title;                // this bulundugu yerdeki objeyi refere eder, yani book u
     this.author = author;
@@ -28,7 +30,7 @@ const book2 = new Book('Sinekli Bakkal', 'H.Edip Adivar', '1910');
 console.log(book1);
 console.log(book2.getSummary());
 
-book1.price = 100;              // yeni gelen property sadece book1 e eklendi. kalibi degistirmedik sadece book1 de degisiklik yaptik.
+book1.price = 100;       // yeni gelen property sadece book1 e eklendi. kalibi degistirmedik sadece book1 de degisiklik yaptik.
 console.log(book1, book2);
 
 //! Eger yeni bir proprty veya fonksiyonu constructor a eklemek istersek prototypr i kullanabliriz.
@@ -63,7 +65,8 @@ console.log(Book.prototype);
 console.log(book1.__proto__);   
 
 
-// js prototype basic bir dildir. oop acisindan.  bellek yonetimi icin prototype gelistirilmis. avantajli bir yontemdir.
+// js prototype basic bir dildir. oop acisindan.  bellek yonetimi icin prototype gelistirilmis. 
+//avantajli bir yontemdir.
 // dezavantaji guvenlik konusu.global sakalama alani guvenlik acisindan sikinti olusturablir.
 
 //? INHERITANCE (Kalitim - ES5)
