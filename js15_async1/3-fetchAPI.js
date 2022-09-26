@@ -40,7 +40,6 @@ const updateDom = (data) => {
 
 // NOTSUZ HALI ASAGIDA ;
 
-
 // fetch('https://api.github.com/users')     
 //   .then((res) => {                      
 //     if (!res.ok) {

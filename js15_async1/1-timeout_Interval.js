@@ -4,9 +4,8 @@
 
 //! Javascript, bir single-threaded ve Asenkron Programlama dilidir.
 
-// javaScript is a single-threaded language, which means it has only one call stack that is used to execute the program. The call stack is the same as the stack data structure that you might read in Data structures.
-
-// Javascript is a single threaded language. This means it has one call stack and one memory heap. As expected, it executes code in order and must finish executing a piece code before moving onto the next. It's synchronous, but at times that can be harmful. For example, if a function takes awhile to execute or has to wait on something, it freezes everything up in the meanwhile.
+// javaScript is a single-threaded language, which means it has only one call stack that is used to execute the program. As expected, it executes code in order and must finish executing a piece code before moving onto the next. It's synchronous, but at times that can be harmful. 
+//  For example, if a function takes awhile to execute or has to wait on something, it freezes everything up in the meanwhile.
 
 //A good example of this happening is the window alert function. alert("Hello World")
 
