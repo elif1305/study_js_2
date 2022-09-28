@@ -7,7 +7,7 @@
 
 // ➤ The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.
 
-// ➤ A web page is a document that can be either displayed in the browser window or as the HTML source. In both cases, it is the same document but the Document Object Model (DOM) representation allows it to be manipulated. As an object-oriented representation of the web page, it can be modified with a scripting language such as JavaScript.
+// ➤ The Document Object Model (DOM) representation allows it to be manipulated. 
 
 // ➤ The DOM represents an HTML or XML document as a hierarchy of nodes. Any node has relationships to other nodes in the DOM tree. The relationships are the same as the one described in a traditional family tree.
 
@@ -15,8 +15,7 @@
 
 // The <body> node is the sibling of the <head> node because they share the same immediate parent, which is the <html> element.
 
-// An HTML or XML document can be represented as a tree of nodes, like a traditional family tree.
-// Each markup can be represented as a node with a specific node type.
+
 // Element is a specific type of node with the node type Node.ELEMENT_NODE.
 // In the DOM tree, a node has relationships with other nodes.
 
@@ -33,7 +32,7 @@ console.log('***** SELECTORS *****');
 //window.document
 //document.(id)  ile html icindeki elementlere,taglere vs erisiyoruz.
 
-//nodelist array ozelliklerini kullanmaay izin veriyor.
+//nodelist array ozelliklerini kullanmaya izin veriyor.
 
 // Accessing DOM
 // ➤ We have some methods to access the elements inside html document. These methods belong to Element object of the DOM
@@ -88,7 +87,7 @@ const par = document.getElementsByClassName('par');
 
 // par[0].style.textContent = "DOM manipulasyonu";
 // par[0].innerText = 'DOM manipulasyonu';
-// par[0].innerHTML = "dom manipulasyonu";
+// par[0].textContent = "dom manipulasyonu";
 // par[0].innerHTML = "<a href='www.google.com'>GOOGLE</a>";
 par[0].innerHTML += "<a href='www.google.com'>GOOGLE</a>";    //! silmeden uzerine eklemek icin 
 
