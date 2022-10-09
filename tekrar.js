@@ -73,3 +73,13 @@ fetch("httpssdfsdffssf")
 })
 .then((data)=>updateDom(data))
 .catch((err)=> console.log(err))
+
+
+fetch('url')
+.then((res)=>{
+    if(!res.ok){
+        throw new Error('kkmk')
+    }
+    return res.json()
+    
+})
