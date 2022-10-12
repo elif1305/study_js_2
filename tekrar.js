@@ -83,3 +83,66 @@ fetch('url')
     return res.json()
     
 })
+
+
+/* 
+
+function isminiYazdir(){
+
+ var isim = "elif"
+
+ var number = 5
+
+}
+
+// var if, switch gibi 
+
+// console.log(number)
+
+
+
+var flag = true
+
+if(flag){
+
+let number = 6
+
+// console.log(number)
+
+}else{
+
+var kankam = "huseyin"
+
+}
+
+
+
+console.log(number)
+
+ */
+ 
+/*  kankam = "huseyin"
+ 
+ console.log(kankam)
+ 
+ var kankam ; */
+
+// backwward competbility
+
+/* var myArray = [1, 2, 1, 1, 2, 1, 3, 4, 1]
+
+let unique = [...new Set(myArray)];
+
+console.log(unique) */
+
+
+
+/* const name = "huseyin"
+const gulFamily = {
+  name : "lale",
+  surname : "gul"
+} 
+gulerFamily.name = "can"
+console.log(gulerFamily)
+ // primitive type,: ev
+ // reference type : degerini degistirebilirz.: esyalar */
