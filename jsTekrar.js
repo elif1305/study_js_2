@@ -14,12 +14,16 @@
 // JS is highlevel , cross-platform
 // high-level : bellek yonetimi hususlari ile ugrasilmiyor, programlamayi kolaylasitiriyor
 // cross-platform : her ortamda her browserda calisir, telefonda bilgisayarda , tablette
-// object orianted : 
+// object orianted : JavaScript is modeled around objects with properties and methods which can be handled in a modular fashion.
 // dynamism saglar
 // object orianted computer programming language
 // ilk adi mocha
 // js is used to create client-side dynamic pages
 // its also one of the core technologies of the web, along with HTML and CSS .
+
+//?What happens to the website and the code when you write code in the browser console?
+//Code in the browser console impacts the current browser instance only. It exists in the console for as long as the window is open.
+
 
 // NOT : JS IS VERY CASE SENSITIVE !!  
 
@@ -161,9 +165,122 @@
 
 
 // -> Scope
-// Global scope
-// Function scope
+// Global scope (Function scope)
 // Block scope
+
+//* var : 
+    // Global scope : It means variables defined outside the function can be accessed globally, 
+    //and variables defined inside a particular function can be accessed within the function. 
+    // Bu, fonksiyonun dışında tanımlanan değişkenlere global olarak erişilebileceği 
+    //ve belirli bir fonksiyon içinde tanımlanan değişkenlere fonksiyon içerisinden erişilebileceği 
+    //anlamına gelir.
+    //It can be updated and re-declared into the scope.
+    //It can be declared without initialization.
+    //It can be accessed without initialization as its default value is “undefined”.
+
+    //ornek 1 : 
+    // var a = 10                             it can be accessible everywhere in the program.
+    //     function f(){
+    //         console.log(a)    => 10
+    //     }
+    // f();
+    // console.log(a)     => 10
+
+    // ornek 2:
+    // function f() {
+ 
+    //   // It can be accessible any
+    //   // where within this function
+    //   var a = 10;
+    //   console.log(a)   => 10
+    //  }
+    //  f();               
+
+    // A cannot be accessible
+    // outside of function
+    // console.log(a);                     =>ReferenceError: a is not defined
+
+
+    //ornek 3 : User can re-declare variable using var and user can update var variable.
+    // var a = 10
+   
+    // // User can re-declare
+    // // variable using var
+    // var a = 8
+ 
+    // // User can update var variable
+    // a = 7
+
+    // ornek 4; If users use the var variable before the declaration, 
+    //it initializes with the undefined value. 
+
+    // console.log(a);             =>undefined
+    // var a = 10;
+
+//* let :
+  // Scope: block scoped: The scope of a let variable is only block scoped. It can’t be accessible outside the particular block
+  
+  //It can be updated but cannot be re-declared into the scope.
+  //It can be declared without initialization.
+  //It cannot be accessed without initialization otherwise it will give ‘referenceError’.
+
+  //ornek 1: 
+  // let a = 10;
+  // function f() {
+  //     let b = 9
+  //     console.log(b);          => 9
+  //     console.log(a);           => 10
+  // }
+  // f();
+
+  // ornek 2:The code returns an error because we are accessing 
+  //the let variable outside the function block.
+  // let a = 10;
+  //   function f() {
+  //       if (true) {
+  //           let b = 9
+ 
+  //           // It prints 9
+  //           console.log(b);
+  //       }
+ 
+  //       // It gives error as it
+  //       // defined in if block
+  //       console.log(b);
+  //   }
+  //   f()
+ 
+  //   // It prints 10
+  //   console.log(a)
+
+  //ornek 3: Users cannot re-declare the variable defined with the let keyword but can update it.
+  // : It can be updated but cannot be re-declared into the scope.
+  // let a = 10
+ 
+  // // It is not allowed
+  // let a = 10
+
+  // // It is allowed
+  // a = 10
+
+  //ornek 4: Users can declare the variable with the same name in different blocks using the let keyword.
+  // let a = 10
+  // if (true) {
+  //   let a=9
+  //   console.log(a) // It prints 9
+  // }
+  // console.log(a) // It prints 10
+
+  //ornek 5: If users use the let variable before the declaration, 
+  //it does not initialize with undefined just like a var variable and return an error.
+  // console.log(a);            => Uncaught ReferenceError: Cannot access 'a' before initialization
+  // let a = 10;
+
+//* const; 
+//Scope: block scoped: When users declare a const variable, they need to initialize it, otherwise, 
+//it returns an error. The user cannot update the const variable once it is declared. 
+// - It cannot be updated or re-declared into the scope.
+// -It cannot be declared without initialization.
 
 
 // -> STACK and HEAP
