@@ -110,6 +110,7 @@
 // What is a Variable?
 // In computer programming, a variable , either known or unknown, 
 // a container for storing data with a given name.
+// variables are used to store data values.
 
 // var, let, const
 // rakamla baslamaz,
@@ -117,11 +118,21 @@
 // let ile yapilabilir
 // ES6 ile const ve let geldi. ( var in kullanimi artik tavsiye edilmiyor.)
 
-// NOT : casesensitive unutma!
 // ⚠️ Warning ! :
 // JavaScript is case sensitive. This means that the variables myNumber, 
 // mynumber or MYNUMBER are not same variables. 
 // All of them are different variables.
+
+//let a,b,c; // declare
+//a = 5 // assign
+//b = 7 // assign
+
+//In this example, x is defined as a variable. Then, x is assigned (given) the value 6:
+//let x;
+//x = 6;
+
+// JavaScript White Space: JavaScript ignores multiple spaces. You can add white space to your script to make it more readable.
+// A good practice is to put spaces around operators ( = + - * / ) 
 
 
 // -> Naming rules:
@@ -142,7 +153,6 @@
 //    ●a dollar sign ($)
 
 // ➤ JavaScript names must not contain spaces, mathematical or logical operators.
-
 // ➤ Reserved words cannot be used as names
 
 // Naming Conventions
@@ -168,6 +178,10 @@
 // Global scope (Function scope)
 // Block scope
 
+// var, let, const => keywords
+//If you want a general rule: always declare variables with const.
+//If you think the value of the variable can change, use let.
+
 //* var : 
     // Global scope : It means variables defined outside the function can be accessed globally, 
     //and variables defined inside a particular function can be accessed within the function. 
@@ -175,7 +189,7 @@
     //ve belirli bir fonksiyon içinde tanımlanan değişkenlere fonksiyon içerisinden erişilebileceği 
     //anlamına gelir.
     //It can be updated and re-declared into the scope.
-    //It can be declared without initialization.
+   //Variables defined with var are hoisted to the top and can be initialized at any time.Meaning: You can use the variable before it is declared:
     //It can be accessed without initialization as its default value is “undefined”.
 
     //ornek 1 : 
@@ -220,6 +234,20 @@
 //* let :
   // Scope: block scoped: The scope of a let variable is only block scoped. It can’t be accessible outside the particular block
   
+  // BLOCK SCOPE: 
+/*Before ES6 (2015), JavaScript had only Global Scope and Function Scope.
+
+ES6 introduced two important new JavaScript keywords: let and const.
+
+These two keywords provide Block Scope in JavaScript.
+
+Variables declared inside a { } block cannot be accessed from outside the block:
+{
+  let x = 2;
+}
+// x can NOT be used here */
+
+
   //It can be updated but cannot be re-declared into the scope.
   //It can be declared without initialization.
   //It cannot be accessed without initialization otherwise it will give ‘referenceError’.
@@ -311,6 +339,14 @@
 // So, remember, when you create with primitives, you are working with static data. 
 // JavaScript stores these static data in the stack.
 
+//-------------------------------
+//NOTE : If you put a number in quotes, the rest of the numbers will be treated as strings, and concatenated.
+//let x = "5" + 2 + 3;
+//OUTPUT : 523
+
+//let B =  2 + 3 + "5" 
+//console.log(B) => 55
+//-------------------------------
 
 //! LESSON 2
 
@@ -515,6 +551,15 @@
 // = 3 tur
 
 // string ve integer in toplami stringtir.
+
+// What’s immutability in object-oriented ?
+
+// An immutable object is an object whose state cannot be modified after it is created ,or simply (unchangeable object).
+// So, What does it mean for tech guys in few sentences ?
+
+// 1- Immutable values cannot be modified after creation.
+// 2- Rather than modifying them, create a new version.
+// 3- Copying original and modify copy.
 
 
 //! LESSON 3
