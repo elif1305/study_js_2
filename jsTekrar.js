@@ -3,10 +3,10 @@
 // -> ENVIRONMENT
 
 // Generally there are 3-4 distinct phases;
-// 1- development  ( BIZIM CALISACAGIMIZ YER)
+// 1- development(BIZ)
 // 2-testing
 // 3-staging(could be combined with testing)
-// 4-production   ( canliya cikmasi, urun haline getirilmesi)
+// 4-production  
 
 // -> JS NEDIR?
 
@@ -16,31 +16,15 @@
 // cross-platform : her ortamda her browserda calisir, telefonda bilgisayarda , tablette
 // object orianted : JavaScript is modeled around objects with properties and methods which can be handled in a modular fashion.
 // dynamism saglar
-// object orianted computer programming language
-// ilk adi mocha
 // js is used to create client-side dynamic pages
 // its also one of the core technologies of the web, along with HTML and CSS .
+// NOT : JS IS VERY CASE SENSITIVE !!  
 
 //?What happens to the website and the code when you write code in the browser console?
 //Code in the browser console impacts the current browser instance only. It exists in the console for as long as the window is open.
 
-
-// NOT : JS IS VERY CASE SENSITIVE !!  
-
-// What is Javascript?
-// ➤ JavaScript is a high-level, cross-platform, object-oriented computer programming language.
-
-// JavaScript was developed by Brendan Eich, a developer at Netscape, in 1995. 
-// It is a scripting language executed by browsers, and used with HTML to develop responsive webpages.
-
-// ➤ JavaScript is the most commonly used to create client-side dynamic pages.
-
-// ➤ Today, JavaScript can execute not only in the browser, but also on the server, or actually on any device that 
-// has a special program called the JavaScript engine.
-
-
 // -> ECMAScript 2015 (ES6)
-
+// ➤ ECMAScript (ES) is a scripting language specification intended to standardize JavaScript.
 // Standart kurallardir.
 // ECMA( European Computer Mnufacturers Association) nin olusturudugu standartlardir.
 // is a scripting language specification intended to standardize JS.
@@ -48,27 +32,12 @@
 // <head> e de ekleneblir.
 // NOT : body nin en sonuna eklenmesi tavsiye edilir.(kapatma body taginin hemen ustune.)
 
-// ECMAScript 2015 (ES6)
-// ➤ ECMAScript (ES) is a scripting language specification intended to standardize JavaScript.
-
-// ➤ ECMAScript 2015, which is also known as ECMAScript 6 and ES6, 
-// is the sixth edition of the ECMAScript Language Specification standard.
-
-// ➤ ES6 provides a new set of features and fixes to JavaScript.
-
-// ★ We’re going to dive into what' difference between ES6 and predecessors.
-
-// 🎗️ Commonly Asked Questions:
-// How do I get JavaScript?
-// Where can I download JavaScript?
-// Is JavaScript Free?
-
-// You don't have to get or download JavaScript.
+// Commonly Asked Questions:
+// Where can I download JavaScript
 // JavaScript is already running in your browser on your computer, on your tablet, and on your smart-phone.
-// Free to use for everyone.
+
 
 // -> JSON 
-
 // JS OBJECT NOTATION : bir datayi js imsi tarif ettigimiz dosyaya denir.
 // internette cok kullanilan bir formattir. veri aksiinda kolaylik saglar.
 // sunucu ile frontend backend arasinda haberlesme json ile daha kolay oluyor.
@@ -107,21 +76,12 @@
 //   VARIABLES
 // ======================
 
-// What is a Variable?
+//? What is a Variable?
 // In computer programming, a variable , either known or unknown, 
 // a container for storing data with a given name.
 // variables are used to store data values.
 
 // var, let, const
-// rakamla baslamaz,
-// const ile tekrar atama yapilamaz
-// let ile yapilabilir
-// ES6 ile const ve let geldi. ( var in kullanimi artik tavsiye edilmiyor.)
-
-// ⚠️ Warning ! :
-// JavaScript is case sensitive. This means that the variables myNumber, 
-// mynumber or MYNUMBER are not same variables. 
-// All of them are different variables.
 
 //let a,b,c; // declare
 //a = 5 // assign
@@ -138,24 +98,15 @@
 // -> Naming rules:
 // can use : letters, digits, underscores, dolarsign
 // numbers are not allowed as the first character
-// first character must be: a letter, an underscore. a dola sign
 // must not contain : spaces, math or logical operators
-// reserced words can not be used.
-
-// Naming Rules
-// The general rules for defining names for variables:
-
 // ➤ Names can composed of letters, digits, underscores, and dollar signs.
-// ➤ Numbers are not allowed as the first character.
 // ➤ The first character must be;
 //    ●a letter
 //    ●an underscore ( _ )
 //    ●a dollar sign ($)
-
-// ➤ JavaScript names must not contain spaces, mathematical or logical operators.
 // ➤ Reserved words cannot be used as names
 
-// Naming Conventions
+//? Naming Conventions
 // ➤The camel case naming convention is widely used in JavaScript.
 //  Following that, we'll take a more in-depth look at some of the other conventions.
 // ➤PascalCase
@@ -311,7 +262,7 @@ Variables declared inside a { } block cannot be accessed from outside the block:
 // -It cannot be declared without initialization.
 
 
-// -> STACK and HEAP
+//! -> STACK and HEAP
 
 // Verileri 2 alanda tutar.
 
@@ -351,7 +302,7 @@ Variables declared inside a { } block cannot be accessed from outside the block:
 //! LESSON 2
 
 // ===================
-//   DATA TYPES
+//?   DATA TYPES
 // ====================
 
 // ➤ JavaScript variables can hold numerous data types, such as numbers, strings, booleans, and more.
@@ -423,12 +374,10 @@ Variables declared inside a { } block cannot be accessed from outside the block:
 // => hata verir cunku let ve const ile tanimlanan degerler (var gibi) en uste cikmaz.
 
 
-// NOT : PROMPTAN ALINAN DEGERLER BIZE HER ZAMAN STRING DONDURUR. !!
+//! NOT : PROMPTAN ALINAN DEGERLER BIZE HER ZAMAN STRING DONDURUR. !!
 
 
-// -> NULL
-
-// Primitive data tipi olarak gecer fakat tipine baktigimizda object doner. (js hatasidir)
+// -> NULL : Primitive data tipi olarak gecer fakat tipine baktigimizda object doner. (js hatasidir)
 
 
 // -> NUBMBER
@@ -485,13 +434,9 @@ Variables declared inside a { } block cannot be accessed from outside the block:
 // 3- -0 degeri
 // 4- null
 // 5- undefined (ornek :  let s; )
-
-// Boolean("");
-// Boolean(0);
-// Boolean(-0);
-// Boolean(null);
-// let x;
+// 6- let x;
 // Boolean(x);   //All of these values return false
+// 7 - NaN
 
 
 // ===
@@ -501,10 +446,6 @@ Variables declared inside a { } block cannot be accessed from outside the block:
 // js de hersey objedir.
 // degerleri heapte tutulur.
 // birden fazla veri bir arada tutulablir.
-
-// ➤ Objects in JavaScript, just as in many other programming languages, 
-// can be compared to objects in real life. 
-// The concept of objects in JavaScript can be understood with real life, tangible objects.
 
 // const myCar = new Object();
 // myCar.make = 'Ford';
@@ -525,38 +466,18 @@ Variables declared inside a { } block cannot be accessed from outside the block:
 // Other Operators
 
 
-// NaN == NaN  FALSE
-// null == null TRUE
-
-// 🎗️ Note:
-// The following values are always falsy:
-// false
-// 0 (zero)
-// -0 (minus zero)
-// 0n (BigInt zero)
-// '', "", `` (empty string)
-// null
-// undefined
-// NaN
-// Everything else is truthy:
-
-// '0' (a string containing a single zero)
-// 'false' (a string containing the text “false”)
-// [] (an empty array)
-// {} (an empty object)
-// function(){} (an “empty” function)
+//! NaN == NaN  FALSE
+//! null == null TRUE
 
 // null + 3
-
 // = 3 tur
 
-// string ve integer in toplami stringtir.
+//? string ve integer in toplami stringtir.
 
-// What’s immutability in object-oriented ?
+//* What’s immutability in object-oriented ?
 
 // An immutable object is an object whose state cannot be modified after it is created ,or simply (unchangeable object).
 // So, What does it mean for tech guys in few sentences ?
-
 // 1- Immutable values cannot be modified after creation.
 // 2- Rather than modifying them, create a new version.
 // 3- Copying original and modify copy.
