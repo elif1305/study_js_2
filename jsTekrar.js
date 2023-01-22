@@ -2,6 +2,7 @@
 
 // -> ENVIRONMENT
 
+// bizim uretimden urunun son kullaniciya ulasincaya kadar gecen sure.
 // Generally there are 3-4 distinct phases;
 // 1- development(BIZ)
 // 2-testing
@@ -30,7 +31,10 @@
 // is a scripting language specification intended to standardize JS.
 // JS icin es6 kirilma noktasidir.
 // <head> e de ekleneblir.
-// NOT : body nin en sonuna eklenmesi tavsiye edilir.(kapatma body taginin hemen ustune.)
+//! NOT : body nin en sonuna eklenmesi tavsiye edilir.(kapatma body taginin hemen ustune.), ozellikle DOM a mudahele edeceksek buraya 
+//! yazilmasi tavsiye edilir.
+
+// head in icinde script tagi icinde yazilablir veya external olarak yine (script src='myScript1.js') tagi icinde yazilablir.
 
 // Commonly Asked Questions:
 // Where can I download JavaScript
@@ -91,20 +95,20 @@
 //let x;
 //x = 6;
 
-// JavaScript White Space: JavaScript ignores multiple spaces. You can add white space to your script to make it more readable.
+//? JavaScript White Space: JavaScript ignores multiple spaces. You can add white space to your script to make it more readable.
 // A good practice is to put spaces around operators ( = + - * / ) 
 
 
 // -> Naming rules:
-// can use : letters, digits, underscores, dolarsign
-// numbers are not allowed as the first character
-// must not contain : spaces, math or logical operators
+// CAN use : letters, digits, underscores, dolarsign
+// numbers are NOT allowed as the first character
+// must NOT contain : spaces, math or logical operators
 // ➤ Names can composed of letters, digits, underscores, and dollar signs.
 // ➤ The first character must be;
 //    ●a letter
 //    ●an underscore ( _ )
 //    ●a dollar sign ($)
-// ➤ Reserved words cannot be used as names
+// ➤ Reserved words CANNOT be used as names.
 
 //? Naming Conventions
 // ➤The camel case naming convention is widely used in JavaScript.
@@ -262,6 +266,62 @@ Variables declared inside a { } block cannot be accessed from outside the block:
 // -It cannot be declared without initialization.
 
 
+// daha basit anlasilmasi icin:
+// 1)
+var myNumber1 = 5;
+console.log(myNumber1);  // burada 5 yazdirir
+/*
+
+*/
+var myNumber1 = 'merhaba';
+console.log(myNumber1);       // burada merhaba yazdirir. 
+
+// 2)
+let var1 = 55;
+console.log(var1);
+
+let var1 = 99 // burada hata verir.
+
+var1 = 99
+console.log(var1);  // burada hata vermez.
+
+// 2) const ile oldugunda
+const var1 = 55;
+console.log(var1);
+
+const var1 = 99 // burada hata verir.
+
+var1 = 99
+console.log(var1);  // burada da hata verir.
+
+// 3)
+{
+  let localVar1 = 'local variable';
+  var myName = 'ella'
+  console.log(localVar1)   // yazdirir
+}
+
+console.log(localVar1);  // hata verir
+console.log(myName)    // ella ciktisni verir.
+
+// INTERVIEW :
+
+// console.log(a);
+// var a = 3;
+
+// => undefined verir.
+
+// var ile tanimlandiginda bu tanimlar en uste cikar.
+// a degeri tanimlanmis ama degeri clg den sonra verildigi icin undefined verir.
+
+// console.log(a);
+// let a = 3;
+
+// console.log(a);
+// const a = 3;
+
+// => hata verir cunku let ve const ile tanimlanan degerler (var gibi) en uste cikmaz.
+
 //! -> STACK and HEAP
 
 // Verileri 2 alanda tutar.
@@ -311,7 +371,7 @@ Variables declared inside a { } block cannot be accessed from outside the block:
 
 // ➤ Primitive Data Types:
 
-// ● undefined : typeof aValue === "undefined"
+// ● undefined : typeof aValue === "undefined"        //
 
 // ● null : typeof aValue === "object" (*)
 
@@ -346,7 +406,8 @@ Variables declared inside a { } block cannot be accessed from outside the block:
 // console.log("8. " + typeof aValue);
 
 // 1. undefined  : tanimlanmis ama deger atamasi yapilmamis demek, hata degildir, veri tipidir.. 
-// ( is not defined : bir hatadir, hic tanimlanmadi demek.)
+// --> declared but no value assigned
+// ( is not defined : bir hatadir,veritipi degildir. hic tanimlanmadi demek.)
 // 2. object
 // 3. number
 // 4. string
@@ -355,37 +416,22 @@ Variables declared inside a { } block cannot be accessed from outside the block:
 // 7. symbol
 // 8. object
 
-// INTERVIEW :
 
-// console.log(a);
-// var a = 3;
-
-// => undefined verir.
-
-// var ile tanimlandiginda bu tanimlar en uste cikar.
-// a degeri tanimlanmis ama degeri clg den sonra verildigi icin undefined verir.
-
-// console.log(a);
-// let a = 3;
-
-// console.log(a);
-// const a = 3;
-
-// => hata verir cunku let ve const ile tanimlanan degerler (var gibi) en uste cikmaz.
-
-
-//! NOT : PROMPTAN ALINAN DEGERLER BIZE HER ZAMAN STRING DONDURUR. !!
+//! NOT : PROMPTAN ALINAN DEGERLER BIZE HER ZAMAN STRING DONDURUR. !! prompt un basina + koyarak number degerine cevirebiliriz.
 
 
 // -> NULL : Primitive data tipi olarak gecer fakat tipine baktigimizda object doner. (js hatasidir)
 
 
-// -> NUBMBER
+// -> NUMBER
 // 3.14
 // 1300
 // 1_000_000
 
 // NOT : isNaN ile number olup olmadigini kontrol edilir.
+
+//console.log(`${typeof (8 + 3)}`);   --> retuns number
+//console.log(`${typeof (8 > 3)}`);   --> retuns boolean
 
 // NOT : console.log(015 + 025);
 // basina 0 koydugumuzda 7lik(octal) sisteme geciyor.
@@ -459,11 +505,18 @@ Variables declared inside a { } block cannot be accessed from outside the block:
 
 
 // -> Operators
-// Assignment Operators
-// Arithmetic Operators
-// Comparison Operators
-// Logical Operators
-// Other Operators
+//? Assignment Operators (atama)
+//? Arithmetic Operators
+//? Comparison Operators
+
+// 3 == '3'   true
+// 3 === '3'  false
+
+//? Logical Operators
+// && and   (verilen tum degerler 1  ise 1 dondurur )
+// || or   (verilen tum degerler 0 ise 0 dondurur.)
+
+//? Other Operators
 
 
 //! NaN == NaN  FALSE
@@ -472,7 +525,30 @@ Variables declared inside a { } block cannot be accessed from outside the block:
 // null + 3
 // = 3 tur
 
-//? string ve integer in toplami stringtir.
+//! string ve integer in toplami stringtir.
+
+//POSFIX  (once ata sonra ekle(cikar) )
+// INC  (++)
+let a = 10;
+let b = a++
+// sonuc : a = 11 b = 10
+
+// DEC  (--)
+let a = 10;
+let b = a--
+// sonuc : a = 9 b = 10
+
+//PREFIX  (once ekle(cikar) sonra ata )
+// INC  (++)
+let a = 10;
+let b = ++a
+// sonuc : a = 11 b = 11
+
+// DEC  (--)
+let a = 10;
+let b = --a
+// sonuc : a = 9 b = 9
+
 
 //* What’s immutability in object-oriented ?
 
