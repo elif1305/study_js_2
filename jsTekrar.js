@@ -511,6 +511,7 @@ console.log(myName)    // ella ciktisni verir.
 
 // 3 == '3'   true
 // 3 === '3'  false
+// console.log(3>2>1); // false, soldan okumaya baslar
 
 //? Logical Operators
 // && and   (verilen tum degerler 1  ise 1 dondurur )
@@ -518,7 +519,7 @@ console.log(myName)    // ella ciktisni verir.
 
 //? Other Operators
 
-
+// typeof NAN = number dir.
 //! NaN == NaN  FALSE
 //! null == null TRUE
 
@@ -640,7 +641,7 @@ let b = --a
 
 
 // ORNEK 3
-// NASTED OLARAK DENEME !
+// NASTED OLARAK DENEME!
 // if (n1 > 0) {
 //   console.log(`${n1} is positive`);
 // } else if (n1 < 0) {
