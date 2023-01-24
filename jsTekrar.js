@@ -755,6 +755,7 @@ console.log('****** LOOPS *******');
 
 // console.log('Toplam:', toplam);
 
+
 //? ÖRNEK: Dışarıdan girilen sayının Asal olup olmadığını tespit ederek sonucu yazdıran programı yazınız.
 
 //******************** WHILE ******************
@@ -810,7 +811,7 @@ console.log('****** LOOPS *******');
           eger tahmin > rastgele sayi print(azalt)
 6.  eger hak > 0 ise kullanicidan tahmin al
   degilse print(uzgunum oyun bitti) 
- */
+*/
 
 
   // let hak = 5
@@ -842,9 +843,9 @@ console.log('****** LOOPS *******');
     //  console.log( isNaN(false))
     //   console.log(  isNaN(undefined) )
 
-    //! LESSON 5
 
-    
+
+//! LESSON 5    
 
 
 //! 1.YONTEM //
@@ -1013,7 +1014,8 @@ const tekcift = function(number){  // mumkunse const kullanmaya gayret et, asagi
 // console.log(topla(7,7));
 // console.log(usAl(2,4));
 
-// const menu = () =>console.log("==============");  // asagidaki clg ler menu fonksiyinuna dahil degildr.burada anlatilmak istenen birden fazla iifade varsa suslu icine alinmasi grekir.
+// const menu = () =>console.log("==============");  // asagidaki clg ler menu fonksiyinuna dahil degildr.burada anlatilmak 
+// istenen birden fazla iifade varsa suslu icine alinmasi grekir.
 
 // console.log("js cok kolaymis");
 // console.log("===============");
