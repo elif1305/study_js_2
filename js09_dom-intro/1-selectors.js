@@ -5,16 +5,17 @@
 // DOM
 
 
-// ➤ The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.
+// ➤ The Document Object Model (DOM) is a programming interface for web documents. 
+// It represents the page so that programs can change the document structure, style, and content. 
+// The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.
 
 // ➤ The Document Object Model (DOM) representation allows it to be manipulated. 
 
-// ➤ The DOM represents an HTML or XML document as a hierarchy of nodes. Any node has relationships to other nodes in the DOM tree. The relationships are the same as the one described in a traditional family tree.
+// ➤ The DOM represents an HTML or XML document as a hierarchy of nodes. 
+//Any node has relationships to other nodes in the DOM tree. 
+//The relationships are the same as the one described in a traditional family tree.
 
 // ➤ For example, <body> is a child node of the <html> node, and <html> is the parent of the <body> node.
-
-// The <body> node is the sibling of the <head> node because they share the same immediate parent, which is the <html> element.
-
 
 // Element is a specific type of node with the node type Node.ELEMENT_NODE.
 // In the DOM tree, a node has relationships with other nodes.

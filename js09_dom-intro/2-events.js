@@ -71,4 +71,5 @@ button.addEventListener("click", function(event){  // burada genelde func. icine
 })
 
 
-// event in ayrintilarini gorebliriz. function(event (ya da e) ve clg(event) yazarak ayrintilari console da gorebliriz. yukaridaki ornekteki gibi.
+// event in ayrintilarini gorebliriz. function(event (ya da e) ve clg(event) 
+// yazarak ayrintilari console da gorebliriz. yukaridaki ornekteki gibi.
