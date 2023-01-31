@@ -73,8 +73,6 @@ silBtn.onclick = function(){
     : alert('Silinecek dil kalmadi')
 }
 
-
-
 //* ENTER A BASILDIGINDA DA EKLEME YAPMASI ICIN :
 // dilInput.addEventListener('OLAYIYAZ', (E) =>{NEOLACAGINI YAZ } // ana syntax
 dilInput.addEventListener('keydown', (e) =>{  // KEYDOWN : tusa basildiginda demek
